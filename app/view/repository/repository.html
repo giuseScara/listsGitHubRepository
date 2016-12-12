@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-sm-12 text-center box-patient" style="margin-top:20px;">
+    <img class="img-circle img-responsive img-center img-patients " ng-src=" {{::patSumCtrl.getPatientImage(patSumCtrl.patient)}}" alt="patient image">
+    <h3>{{ patSumCtrl.patient.name }}
+              <small>{{ patSumCtrl.patient.birthDate | date }} </small>
+            </h3>
+    <p>
+      Height: {{ patSumCtrl.patient.heightCm }} cm - Weight: {{ patSumCtrl.patient.weightKg }} kg - B.M.I.: {{ patSumCtrl.patient.bmi }}
+    </p>
+
+  </div>
+  <div class="col-xs-12" style="background-color:white;height: 300px">
+
+
+  </div>
+</div>
