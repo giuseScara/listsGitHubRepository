@@ -35,5 +35,5 @@ Open terminal:
  cd listsGitHubRepository <br>
  npm install <br>
  gulp <br>
- karma start
+ npm test
 </pre>
