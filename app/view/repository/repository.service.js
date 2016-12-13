@@ -12,7 +12,6 @@ function RepositoryService(http) {
 
   function getData(username) {
     var url = urlGitHub + username + "/repos";
-    console.log(url);
     var promise = http.get(url);
 
     promise.success(function (response) {

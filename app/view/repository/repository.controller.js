@@ -7,10 +7,15 @@ function RepositoryController(routeParams, service) {
   var vm = this;
   var user = routeParams.user;
   vm.owner = null;
-  service.getData(user).success(function (response) {
+  vm.repository = null;
+  service.getData(user).then(function (response) {
     console.log(response);
-  }).error(function (response) {
-    console.log(response);
+
+    if (response.data !== null && response.data.length > 0) {
+
+      vm.owner = response.data[0].owner;
+      vm.repository = response.data;
+    }
   });
 
 }; // RepositoryController

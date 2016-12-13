@@ -1,16 +1,56 @@
 <div class="row">
-  <div class="col-sm-12 text-center box-patient" style="margin-top:20px;">
-    <img class="img-circle img-responsive img-center img-patients " ng-src=" {{::patSumCtrl.getPatientImage(patSumCtrl.patient)}}" alt="patient image">
-    <h3>{{ patSumCtrl.patient.name }}
-              <small>{{ patSumCtrl.patient.birthDate | date }} </small>
-            </h3>
-    <p>
-      Height: {{ patSumCtrl.patient.heightCm }} cm - Weight: {{ patSumCtrl.patient.weightKg }} kg - B.M.I.: {{ patSumCtrl.patient.bmi }}
-    </p>
 
+  <div class="col-sm-12 text-center box-user">
+    <img class="img-circle img-responsive img-center img-user" src="{{repoCtrl.owner.avatar_url}}" alt="user image">
+    <h3>{{ repoCtrl.owner.login }}<br>
+      <small>{{ repoCtrl.owner.type }} </small>
+    </h3>
   </div>
-  <div class="col-xs-12" style="background-color:white;height: 300px">
+  <div class="col-xs-12">
+    <div class="panel panel-default text-left">
+      <div class="panel-heading">
+        <h3 class="panel-title">Repository list</h3>
+      </div>
+      <div class="panel-body">
+        <div class="well well-lg" ng-if="!repoCtrl.repository">
+          No repository found
+        </div>
 
-
+        <div class="table-responsive" ng-if="repoCtrl.repository">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="row">#</th>
+                <th class="col-xs-3">Name</th>
+                <th class="col-xs-3">Descritpion</th>
+                <th class="col-xs-1">Repo</th>
+                <th class="col-xs-1">Git</th>
+                <th class="col-xs-2">Languages</th>
+                <th class="col-xs-3">Last update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="item in repoCtrl.repository">
+                <th class="row">{{$index + 1}}</th>
+                <td>{{ item.name }}</td>
+                <td> {{ item.description }}</td>
+                <td>
+                  <a href="{{ item.html_url }}" target="_blank"> <i class="fa fa-github"></i> </a>
+                </td>
+                <td>
+                  <a href="{{ item.git_url }}" target="_blank"> <i class="fa fa-code-fork"></i> </a>
+                </td>
+                <td>
+                  {{item.language}}
+                </td>
+                <td> {{ item.updated_at | date:'longDate'}}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

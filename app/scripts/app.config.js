@@ -5,26 +5,29 @@ angular.module("AppModule").config(ConfigInterceptor);
 ConfigInterceptor.$inject = ['$httpProvider'];
 
 function ConfigInterceptor(httpProvider) {
-  httpProvider.interceptors.push(['$q', function ($q) {
+  httpProvider.interceptors.push(['$q', '$injector', function ($q, $injector) {
+    var AppService = $injector.get("AppService");
     return {
       'request': function (config) {
-        angular.element(".overlay").show();
+        AppService.showOverlay();
         return config;
       },
 
       'requestError': function (rejection) {
-        angular.element(".overlay").hide();
+        AppService.hideOverlay();
+        AppService.showErrorMessage();
         return $q.reject(rejection);
       },
 
       'response': function (response) {
-        angular.element(".overlay").hide();
+        AppService.hideOverlay();
         return response;
       },
 
       // optional method
       'responseError': function (rejection) {
-        angular.element(".overlay").hide();
+        AppService.hideOverlay();
+        AppService.showErrorMessage();
         return $q.reject(rejection);
       }
     };

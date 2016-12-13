@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 54.0.2840 (Mac OS X 10.11.6)" package="" timestamp="2016-12-13T23:33:10" id="0" hostname="mp.local" tests="10" errors="0" failures="0" time="0.081">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36"/>
+  </properties>
+  <testcase name="Unit: Controller Test Controller: LoginController LoginController should not be null" time="0.03" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Controller Test"/>
+  <testcase name="Unit: Controller Test Controller: LoginController user should be null" time="0.007" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Controller Test"/>
+  <testcase name="Unit: Controller Test Controller: RepositoryController RepositoryController should not be null" time="0.009" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Controller Test"/>
+  <testcase name="Unit: Controller Test Controller: RepositoryController owner should not be null" time="0.002" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Controller Test"/>
+  <testcase name="Unit: Controller Test Controller: RepositoryController repository should be null" time="0.009" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Controller Test"/>
+  <testcase name="Unit: Controller Test Controller: RepositoryController should resolve promise, owner should not be null" time="0.006" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Controller Test"/>
+  <testcase name="Unit: Controller Test Controller: RepositoryController should resolve promise, repository should not be null" time="0.002" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Controller Test"/>
+  <testcase name="Unit: Controller Test Controller: RepositoryController should resolve promise, repository should not be null" time="0.005" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Controller Test"/>
+  <testcase name="Unit: Controller Test Controller: RepositoryController should resolve promise, owner should not be null" time="0.003" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Controller Test"/>
+  <testcase name="Unit: Service Test RepositoryService: getData should invoke GET service completed" time="0.008" classname="Chrome_54_0_2840_(Mac_OS_X_10_11_6).Unit: Service Test"/>
+  <system-out>
+    <![CDATA[Chrome 54.0.2840 (Mac OS X 10.11.6) LOG: Object{data: [Object{id: ..., name: ..., full_name: ..., owner: ...}]}
+,Chrome 54.0.2840 (Mac OS X 10.11.6) LOG: Object{data: [Object{id: ..., name: ..., full_name: ..., owner: ...}]}
+,Chrome 54.0.2840 (Mac OS X 10.11.6) LOG: Object{data: []}
+,Chrome 54.0.2840 (Mac OS X 10.11.6) LOG: Object{data: []}
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
